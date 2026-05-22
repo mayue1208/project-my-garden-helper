@@ -1,0 +1,63 @@
+// ===== 绿色系统（清新自然） =====
+$green: #07c160;
+$green-deep: #1b8a3d;
+$green-fresh: #4ec97a;
+$green-bg: #e8f5e9;
+$green-pale: #f0faf3;
+
+// ===== 功能色 =====
+$amber: #ff9800;
+$red: #e64340;
+$blue: #1989fa;
+
+// ===== 文字 =====
+$text-primary: #1a1a2e;
+$text-secondary: #8c8c8c;
+$text-hint: #bfbfbf;
+$text-white: #ffffff;
+$text-link: $green;
+
+// ===== 背景 =====
+$bg-page: #f6f8f6;
+$bg-card: #ffffff;
+$bg-tag: #f0f0f0;
+$bg-overlay: rgba(0, 0, 0, 0.5);
+
+// ===== 边框 =====
+$border-color: #e8e8e8;
+$border-light: #f0f0f0;
+
+// ===== 圆角 =====
+$radius-sm: 8rpx;
+$radius-md: 12rpx;
+$radius-lg: 16rpx;
+$radius-round: 30rpx;
+$radius-circle: 50%;
+
+// ===== 间距 =====
+$spacing-xs: 8rpx;
+$spacing-sm: 12rpx;
+$spacing-md: 16rpx;
+$spacing-lg: 20rpx;
+$spacing-xl: 24rpx;
+$spacing-2xl: 30rpx;
+$spacing-3xl: 40rpx;
+
+// ===== 阴影 =====
+$shadow-sm: 0 2rpx 8rpx rgba(7, 193, 96, 0.08);
+$shadow-md: 0 4rpx 16rpx rgba(7, 193, 96, 0.1);
+$shadow-lg: 0 8rpx 24rpx rgba(7, 193, 96, 0.12);
+
+// ===== 字体大小 =====
+$font-xs: 22rpx;
+$font-sm: 24rpx;
+$font-md: 26rpx;
+$font-base: 28rpx;
+$font-lg: 30rpx;
+$font-xl: 32rpx;
+$font-2xl: 36rpx;
+$font-3xl: 40rpx;
+
+// ===== 布局 =====
+$tab-bar-height: 100rpx;
+$fab-size: 100rpx;

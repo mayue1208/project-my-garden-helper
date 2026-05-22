@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "养护提醒",
+  "usingComponents": {
+    "family-switcher": "../../components/family-switcher/index",
+    "reminder-item": "../../components/reminder-item/index",
+    "quick-record": "../../components/quick-record/index"
+  }
+}

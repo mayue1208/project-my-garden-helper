@@ -1,0 +1,58 @@
+@import '@/styles/variables.scss';
+
+.page {
+  padding: $spacing-lg;
+  padding-bottom: 100rpx;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: $spacing-xl;
+  margin-bottom: $spacing-md;
+}
+
+.user-name {
+  font-size: $font-2xl;
+  font-weight: bold;
+  color: $text-primary;
+}
+
+.count {
+  font-size: $font-md;
+  color: $text-secondary;
+  margin-left: $spacing-lg;
+}
+
+.date-group {
+  margin-bottom: $spacing-lg;
+}
+
+.date-label {
+  font-size: $font-base;
+  font-weight: bold;
+  color: $text-secondary;
+  display: block;
+  margin-bottom: $spacing-sm;
+  padding: 0 $spacing-sm;
+}
+
+.op-group {
+  padding: $spacing-md $spacing-lg;
+  margin-bottom: $spacing-sm;
+  display: flex;
+  align-items: center;
+}
+
+.op-type {
+  font-size: $font-base;
+  color: $text-primary;
+  font-weight: 500;
+  margin-right: $spacing-md;
+  flex-shrink: 0;
+}
+
+.op-plants {
+  font-size: $font-md;
+  color: $text-secondary;
+}

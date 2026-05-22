@@ -1,0 +1,63 @@
+@import '@/styles/variables.scss';
+
+.page {
+  padding: $spacing-lg;
+}
+
+.room-list {
+  margin-bottom: $spacing-2xl;
+}
+
+.room-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-md;
+}
+
+.room-info {
+  display: flex;
+  align-items: center;
+}
+
+.room-icon {
+  margin-right: $spacing-sm;
+}
+
+.room-name {
+  font-size: $font-base;
+  font-weight: 500;
+  color: $text-primary;
+}
+
+.default-tag {
+  font-size: $font-xs;
+  color: $text-secondary;
+  background: $green-bg;
+  padding: 2rpx $spacing-sm;
+  border-radius: $radius-round;
+  margin-left: $spacing-sm;
+}
+
+.actions {
+  display: flex;
+  gap: $spacing-lg;
+}
+
+.action-btn {
+  font-size: $font-md;
+  color: $green;
+
+  &.danger {
+    color: $red;
+  }
+}
+
+.add-btn {
+  width: 100%;
+  background: $bg-card;
+  color: $green;
+  border: 2rpx dashed $green;
+  margin-top: $spacing-2xl;
+}

@@ -1,0 +1,75 @@
+@import '@/styles/variables.scss';
+
+.page {
+  padding: $spacing-lg;
+}
+
+.section {
+  padding: $spacing-xl;
+  margin-bottom: $spacing-md;
+}
+
+.section-title {
+  font-size: $font-lg;
+  color: $text-secondary;
+  display: block;
+  margin-bottom: $spacing-md;
+}
+
+.value-text {
+  font-size: $font-xl;
+  color: $text-primary;
+}
+
+.switch-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-md 0;
+  border-bottom: 1rpx solid $border-light;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.switch-label {
+  font-size: $font-lg;
+  color: $text-primary;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: $spacing-md 0;
+  font-size: $font-lg;
+  color: $text-primary;
+}
+
+.logout-section {
+  margin-top: 80rpx;
+  text-align: center;
+  padding: $spacing-xl;
+}
+
+.logout-text {
+  font-size: $font-lg;
+  color: #ff4d4f;
+}
+
+.clear-item {
+  padding: $spacing-md 0;
+}
+
+.clear-text {
+  font-size: $font-base;
+  color: #ff4d4f;
+  display: block;
+}
+
+.clear-hint {
+  font-size: $font-xs;
+  color: $text-hint;
+  margin-top: $spacing-xs;
+  display: block;
+}

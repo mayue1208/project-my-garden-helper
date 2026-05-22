@@ -1,0 +1,140 @@
+@import '@/styles/variables.scss';
+
+.page {
+  padding: $spacing-lg;
+}
+
+.form {
+  padding: $spacing-xl;
+}
+
+.photo-upload {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 0 auto $spacing-xl;
+
+  .preview {
+    width: 100%;
+    height: 100%;
+    border-radius: $radius-lg;
+  }
+
+  .placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 2rpx dashed $border-color;
+    border-radius: $radius-lg;
+    background: $green-pale;
+
+    .plus {
+      font-size: 60rpx;
+      color: $green;
+    }
+
+    .hint {
+      font-size: $font-sm;
+      color: $text-secondary;
+      margin-top: $spacing-xs;
+    }
+  }
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  padding: $spacing-xl 0;
+  border-bottom: 1rpx solid $border-light;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.label {
+  width: 140rpx;
+  font-size: $font-base;
+  color: $text-primary;
+  flex-shrink: 0;
+}
+
+.input {
+  flex: 1;
+  font-size: $font-base;
+  color: $text-primary;
+}
+
+.value-text {
+  font-size: $font-base;
+  color: $text-primary;
+}
+
+.section-title {
+  font-size: $font-base;
+  font-weight: bold;
+  padding: $spacing-lg 0 $spacing-md;
+  color: $text-primary;
+}
+
+.care-configs {
+  padding: $spacing-lg $spacing-xl;
+}
+
+.care-config-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-md 0;
+  border-bottom: 1rpx solid $border-light;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.care-label-row {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+}
+
+.care-label {
+  font-size: $font-base;
+  color: $text-primary;
+}
+
+.care-input-group {
+  display: flex;
+  align-items: center;
+  font-size: $font-md;
+  color: $text-secondary;
+}
+
+.num-input {
+  width: 80rpx;
+  text-align: center;
+  border: 1rpx solid $border-color;
+  border-radius: $radius-sm;
+  margin: 0 $spacing-sm;
+  padding: $spacing-xs;
+  font-size: $font-base;
+}
+
+.note-field {
+  margin-top: $spacing-md;
+
+  .note-input {
+    width: 100%;
+    min-height: 120rpx;
+    font-size: $font-base;
+    line-height: 1.5;
+  }
+}
+
+.submit-btn {
+  margin: $spacing-3xl $spacing-lg;
+  border-radius: $radius-round;
+}

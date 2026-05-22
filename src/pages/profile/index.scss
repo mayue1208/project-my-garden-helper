@@ -1,0 +1,312 @@
+@import '@/styles/variables.scss';
+
+.page {
+  padding: $spacing-lg;
+  padding-bottom: 100rpx;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-2xl;
+  margin-bottom: $spacing-md;
+}
+
+.user-main {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: $radius-circle;
+  flex-shrink: 0;
+}
+
+.avatar-placeholder {
+  background: $green-pale;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-placeholder-text {
+  font-size: $font-3xl;
+  color: $green;
+}
+
+.nickname {
+  font-size: $font-2xl;
+  font-weight: bold;
+  margin-left: $spacing-2xl;
+  color: $text-primary;
+}
+
+.edit-icon {
+  font-size: 40rpx;
+  color: $text-secondary;
+  padding: $spacing-sm;
+  flex-shrink: 0;
+}
+
+.section {
+  padding: $spacing-xl;
+  margin-bottom: $spacing-md;
+}
+
+.section-title {
+  font-size: $font-base;
+  font-weight: bold;
+  color: $text-primary;
+  display: block;
+  margin-bottom: $spacing-md;
+}
+
+.family-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-xl;
+  border-radius: $radius-md;
+  margin-bottom: $spacing-sm;
+  background: $green-pale;
+
+  &.active {
+    border: 2rpx solid $green;
+  }
+}
+
+.family-info {
+  display: flex;
+  align-items: center;
+}
+
+.family-name {
+  font-size: $font-lg;
+  color: $text-primary;
+}
+
+.family-role {
+  font-size: $font-sm;
+  color: $text-secondary;
+  margin-left: $spacing-md;
+}
+
+.arrow {
+  font-size: $font-2xl;
+  color: $text-hint;
+}
+
+.action-row {
+  display: flex;
+  gap: $spacing-2xl;
+  padding-top: $spacing-md;
+}
+
+.action-link {
+  color: $green;
+  font-size: $font-base;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: space-around;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.num {
+  font-size: $font-3xl;
+  font-weight: bold;
+  color: $green;
+  display: block;
+}
+
+.stat-label {
+  font-size: $font-sm;
+  color: $text-secondary;
+  margin-top: $spacing-xs;
+  display: block;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-xl 0;
+  font-size: $font-base;
+  color: $text-primary;
+}
+
+// Overlay 遮罩
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $bg-overlay;
+  z-index: 99;
+}
+
+// Dialog（原有居中弹窗）
+.dialog-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 560rpx;
+  background: $bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-2xl;
+  z-index: 100;
+}
+
+.dialog-title {
+  font-size: $font-xl;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  margin-bottom: $spacing-xl;
+  color: $text-primary;
+}
+
+.dialog-input {
+  border: 1rpx solid $border-color;
+  padding: $spacing-lg $spacing-xl;
+  border-radius: $radius-sm;
+  font-size: $font-base;
+  margin-bottom: $spacing-xl;
+  width: 100%;
+  box-sizing: border-box;
+  height: 80rpx;
+}
+
+.dialog-actions {
+  display: flex;
+  gap: $spacing-lg;
+}
+
+.dialog-cancel,
+.dialog-confirm {
+  flex: 1;
+  border-radius: $radius-round;
+  font-size: $font-base;
+}
+
+.dialog-cancel {
+  background: $bg-tag;
+  color: $text-secondary;
+  border: none;
+}
+
+.dialog-confirm {
+  background: $green;
+  color: $text-white;
+  border: none;
+}
+
+// 底部弹窗面板（授权/修改资料）
+.sheet-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $bg-card;
+  border-radius: $radius-lg $radius-lg 0 0;
+  padding: $spacing-2xl;
+  z-index: 100;
+}
+
+.sheet-title {
+  font-size: $font-lg;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  margin-bottom: $spacing-xl;
+  color: $text-primary;
+}
+
+.sheet-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: $spacing-xl;
+}
+
+.avatar-picker-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-bottom: $spacing-xl;
+  line-height: 1;
+
+  &::after {
+    border: none;
+  }
+}
+
+.avatar-preview {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: $radius-circle;
+}
+
+.avatar-placeholder-sm {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: $radius-circle;
+  background: $green-pale;
+  border: 2rpx dashed $green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-sm-text {
+  font-size: $font-xs;
+  color: $green;
+  text-align: center;
+}
+
+.nickname-input {
+  width: 400rpx;
+  text-align: center;
+  border-bottom: 2rpx solid $border-color;
+  padding: $spacing-md 0;
+  font-size: $font-lg;
+  color: $text-primary;
+}
+
+.sheet-actions {
+  display: flex;
+  gap: $spacing-lg;
+}
+
+.sheet-cancel,
+.sheet-confirm {
+  flex: 1;
+  border-radius: $radius-round;
+  font-size: $font-base;
+}
+
+.sheet-cancel {
+  background: $bg-tag;
+  color: $text-secondary;
+  border: none;
+}
+
+.sheet-confirm {
+  background: $green;
+  color: $text-white;
+  border: none;
+
+  &[disabled] {
+    opacity: 0.6;
+  }
+}

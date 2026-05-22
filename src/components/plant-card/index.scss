@@ -1,0 +1,77 @@
+@import '@/styles/variables.scss';
+
+.plant-card {
+  display: flex;
+  padding: $spacing-lg;
+  background: $bg-card;
+  border-radius: $radius-lg;
+  margin-bottom: $spacing-md;
+  box-shadow: $shadow-sm;
+}
+
+.thumb {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: $radius-md;
+  margin-right: $spacing-lg;
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $green-bg;
+  font-size: 60rpx;
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name-row {
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  font-size: $font-xl;
+  font-weight: bold;
+  color: $text-primary;
+}
+
+.status-tag {
+  font-size: $font-md;
+  padding: 2rpx $spacing-sm;
+  border-radius: $radius-round;
+  margin-left: $spacing-sm;
+
+  &.healthy {
+    background: $green-bg;
+    color: $green-deep;
+  }
+
+  &.warning {
+    background: #fff3e0;
+    color: #e65100;
+  }
+
+  &.critical {
+    background: #fce4ec;
+    color: #c62828;
+  }
+}
+
+.species {
+  font-size: $font-sm;
+  color: $text-secondary;
+  margin-top: 4rpx;
+}
+
+.water-info {
+  font-size: $font-base;
+  color: $text-secondary;
+  margin-top: 6rpx;
+}

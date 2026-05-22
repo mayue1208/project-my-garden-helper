@@ -1,0 +1,100 @@
+@import '@/styles/variables.scss';
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $bg-overlay;
+  z-index: 99;
+}
+
+.record-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $bg-card;
+  padding: $spacing-2xl;
+  border-radius: $radius-lg $radius-lg 0 0;
+  z-index: 100;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.title {
+  font-size: $font-xl;
+  font-weight: bold;
+  color: $text-primary;
+  text-align: center;
+  margin-bottom: $spacing-2xl;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  padding: $spacing-md 0;
+}
+
+.label {
+  width: 100rpx;
+  font-size: $font-base;
+  color: $text-primary;
+  flex-shrink: 0;
+}
+
+.value-text {
+  font-size: $font-base;
+  color: $text-primary;
+}
+
+.type-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-md;
+  padding: $spacing-md 0;
+}
+
+.type-btn {
+  padding: $spacing-sm $spacing-xl;
+  border-radius: $radius-round;
+  background: $bg-tag;
+  font-size: $font-md;
+
+  &.active {
+    background: $green-bg;
+    color: $green-deep;
+  }
+}
+
+.note-input {
+  width: 100%;
+  min-height: 120rpx;
+  font-size: $font-md;
+  border: 1rpx solid $border-color;
+  border-radius: $radius-md;
+  padding: $spacing-sm;
+}
+
+.btn-row {
+  display: flex;
+  gap: $spacing-lg;
+  margin-top: $spacing-2xl;
+}
+
+.cancel-btn {
+  flex: 1;
+  background: $bg-tag;
+  color: $text-secondary;
+  border: none;
+  border-radius: $radius-round;
+}
+
+.submit-btn {
+  flex: 1;
+  background: $green;
+  color: $text-white;
+  border: none;
+  border-radius: $radius-round;
+}

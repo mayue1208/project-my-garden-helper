@@ -1,0 +1,68 @@
+@import '@/styles/variables.scss';
+
+.family-switcher {
+  position: relative;
+}
+
+.family-trigger {
+  display: flex;
+  align-items: center;
+  padding: $spacing-lg $spacing-xl;
+  background: $bg-card;
+  border-bottom: 1rpx solid $border-light;
+}
+
+.family-name {
+  font-size: $font-xl;
+  font-weight: bold;
+  color: $text-primary;
+}
+
+.arrow {
+  font-size: $font-sm;
+  margin-left: $spacing-xs;
+  color: $text-secondary;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $bg-overlay;
+  z-index: 99;
+}
+
+.picker-list {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $bg-card;
+  padding: $spacing-2xl;
+  border-radius: $radius-lg $radius-lg 0 0;
+  z-index: 100;
+}
+
+.picker-item {
+  padding: $spacing-xl 0;
+  font-size: $font-lg;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid $border-light;
+
+  &.active {
+    color: $green;
+  }
+}
+
+.item-name {
+  font-size: $font-lg;
+}
+
+.check {
+  color: $green;
+  font-size: $font-lg;
+}

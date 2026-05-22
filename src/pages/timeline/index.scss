@@ -1,0 +1,139 @@
+@import '@/styles/variables.scss';
+
+.page {
+  padding-bottom: 40rpx;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-2xl $spacing-xl;
+  background: $bg-card;
+}
+
+.plant-name {
+  font-size: $font-xl;
+  font-weight: bold;
+  color: $text-primary;
+}
+
+.add-btn {
+  font-size: $font-base;
+  color: $green;
+  font-weight: 500;
+}
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-md $spacing-xl;
+  background: $bg-card;
+  border-top: 1rpx solid $border-light;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+}
+
+.filter-label {
+  font-size: $font-md;
+  color: $text-hint;
+  margin-right: $spacing-xs;
+}
+
+.filter-value {
+  font-size: $font-base;
+  color: $green;
+  font-weight: 500;
+}
+
+.filter-sep {
+  font-size: $font-sm;
+  color: $text-hint;
+  margin: 0 $spacing-md;
+}
+
+.timeline {
+  padding: $spacing-lg $spacing-2xl;
+}
+
+.month-group {
+  margin-bottom: $spacing-3xl;
+}
+
+.month-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing-lg;
+}
+
+.month-label {
+  font-size: $font-lg;
+  font-weight: bold;
+  color: $text-secondary;
+  margin-right: $spacing-md;
+}
+
+.month-line {
+  flex: 1;
+  height: 1rpx;
+  background: $border-light;
+}
+
+.event-node {
+  display: flex;
+  margin-bottom: $spacing-xl;
+  position: relative;
+  padding-left: $spacing-2xl;
+}
+
+.dot {
+  position: absolute;
+  left: 0;
+  top: $spacing-md;
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: $radius-circle;
+  background: $green;
+}
+
+.event-card {
+  flex: 1;
+  padding: $spacing-md;
+  overflow: hidden;
+}
+
+.event-photo {
+  width: 100%;
+  height: 300rpx;
+  border-radius: $radius-sm;
+  margin-bottom: $spacing-sm;
+}
+
+.event-info {
+  padding: $spacing-xs 0;
+}
+
+.event-type {
+  font-size: $font-lg;
+  font-weight: bold;
+  color: $text-primary;
+}
+
+.event-date-text {
+  font-size: $font-md;
+  color: $text-hint;
+  display: block;
+  margin-top: $spacing-xs;
+}
+
+.event-desc {
+  font-size: $font-md;
+  color: $text-secondary;
+  display: block;
+  margin-top: $spacing-xs;
+  line-height: 1.5;
+}

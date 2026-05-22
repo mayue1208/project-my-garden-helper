@@ -1,0 +1,100 @@
+@import '@/styles/variables.scss';
+
+.page {
+  padding-bottom: 20rpx;
+}
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-md $spacing-xl;
+  margin: 0 $spacing-lg $spacing-md;
+}
+
+.filter-text {
+  font-size: $font-base;
+  color: $text-primary;
+}
+
+.time-tabs {
+  display: flex;
+  background: $bg-tag;
+  border-radius: $radius-round;
+  overflow: hidden;
+
+  text {
+    padding: $spacing-xs $spacing-xl;
+    font-size: $font-md;
+    transition: all 0.2s;
+
+    &.active {
+      background: $green-bg;
+      color: $green-deep;
+    }
+  }
+}
+
+.quick-btn {
+  font-size: $font-2xl;
+  line-height: 1;
+}
+
+.date-group {
+  padding: 0 $spacing-xl $spacing-lg;
+}
+
+.date-title {
+  font-size: $font-xl;
+  font-weight: bold;
+  color: $text-primary;
+  display: block;
+  margin-bottom: $spacing-sm;
+  padding: 0 $spacing-sm;
+}
+
+// 延迟提醒面板
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $bg-overlay;
+  z-index: 99;
+}
+
+.delay-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $bg-card;
+  padding: $spacing-2xl;
+  border-radius: $radius-lg $radius-lg 0 0;
+  z-index: 100;
+}
+
+.delay-title {
+  font-size: $font-xl;
+  font-weight: bold;
+  color: $text-primary;
+  text-align: center;
+  margin-bottom: $spacing-lg;
+}
+
+.delay-option {
+  padding: $spacing-xl 0;
+  font-size: $font-lg;
+  border-bottom: 1rpx solid $border-light;
+  text-align: center;
+  color: $text-primary;
+}
+
+.cancel-delay {
+  margin-top: $spacing-lg;
+  background: $bg-tag;
+  color: $text-secondary;
+  border: none;
+  border-radius: $radius-round;
+}

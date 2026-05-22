@@ -1,0 +1,54 @@
+@import '@/styles/variables.scss';
+
+.page {
+  padding: $spacing-lg;
+}
+
+.form {
+  padding: $spacing-xl;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  padding: $spacing-xl 0;
+  border-bottom: 1rpx solid $border-light;
+
+  &.textarea-field {
+    border-bottom: none;
+  }
+}
+
+.label {
+  width: 140rpx;
+  font-size: $font-base;
+  color: $text-primary;
+  flex-shrink: 0;
+}
+
+.value-text {
+  font-size: $font-base;
+  color: $text-primary;
+}
+
+.input {
+  flex: 1;
+  font-size: $font-base;
+  color: $text-primary;
+}
+
+.farewell-input {
+  width: 100%;
+  min-height: 120rpx;
+  font-size: $font-base;
+  line-height: 1.5;
+}
+
+.submit-btn {
+  margin: $spacing-3xl $spacing-lg;
+  background: $green-bg;
+  color: $green-deep;
+  border: none;
+  border-radius: $radius-round;
+  font-size: $font-base;
+}

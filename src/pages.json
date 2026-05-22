@@ -1,0 +1,33 @@
+{
+  "pages": [
+    { "path": "pages/home/index", "style": { "navigationBarTitleText": "我的植物" } },
+    { "path": "pages/plant-detail/index", "style": { "navigationBarTitleText": "植物详情" } },
+    { "path": "pages/plant-add/index", "style": { "navigationBarTitleText": "添加植物" } },
+    { "path": "pages/reminder/index", "style": { "navigationBarTitleText": "养护提醒" } },
+    { "path": "pages/memorial/index", "style": { "navigationBarTitleText": "纪念碑" } },
+    { "path": "pages/memorial-add/index", "style": { "navigationBarTitleText": "移入纪念碑" } },
+    { "path": "pages/profile/index", "style": { "navigationBarTitleText": "我的" } },
+    { "path": "pages/family-manage/index", "style": { "navigationBarTitleText": "家庭管理" } },
+    { "path": "pages/member-detail/index", "style": { "navigationBarTitleText": "操作记录" } },
+    { "path": "pages/timeline/index", "style": { "navigationBarTitleText": "成长记录" } },
+    { "path": "pages/event-add/index", "style": { "navigationBarTitleText": "添加成长事件" } },
+    { "path": "pages/room-manage/index", "style": { "navigationBarTitleText": "房间管理" } },
+    { "path": "pages/settings/index", "style": { "navigationBarTitleText": "设置" } }
+  ],
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#07c160",
+    "backgroundColor": "#fff",
+    "list": [
+      { "pagePath": "pages/home/index", "text": "首页", "iconPath": "static/tab/home.png", "selectedIconPath": "static/tab/home-active.png" },
+      { "pagePath": "pages/reminder/index", "text": "提醒", "iconPath": "static/tab/reminder.png", "selectedIconPath": "static/tab/reminder-active.png" },
+      { "pagePath": "pages/memorial/index", "text": "纪念", "iconPath": "static/tab/memorial.png", "selectedIconPath": "static/tab/memorial-active.png" },
+      { "pagePath": "pages/profile/index", "text": "我的", "iconPath": "static/tab/profile.png", "selectedIconPath": "static/tab/profile-active.png" }
+    ]
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundColor": "#f5f5f5"
+  }
+}

@@ -1,0 +1,189 @@
+@import '@/styles/variables.scss';
+
+.page {
+  padding: $spacing-lg;
+  padding-bottom: 100rpx;
+}
+
+.section {
+  padding: $spacing-xl;
+  margin-bottom: $spacing-md;
+}
+
+.section-title {
+  font-size: $font-base;
+  font-weight: bold;
+  color: $text-primary;
+  display: block;
+  margin-bottom: $spacing-md;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  padding: $spacing-md 0;
+}
+
+.label {
+  width: 120rpx;
+  font-size: $font-base;
+  color: $text-secondary;
+  flex-shrink: 0;
+}
+
+.value {
+  flex: 1;
+  font-size: $font-base;
+  color: $text-primary;
+}
+
+.edit-link {
+  font-size: $font-md;
+  color: $green;
+  flex-shrink: 0;
+}
+
+.member-item {
+  display: flex;
+  align-items: center;
+  padding: $spacing-md 0;
+  border-bottom: 1rpx solid $border-light;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.member-avatar-circle {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: $radius-circle;
+  background: $green-bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: $spacing-md;
+  flex-shrink: 0;
+}
+
+.avatar-text {
+  font-size: $font-md;
+  color: $green-deep;
+  font-weight: bold;
+}
+
+.member-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.member-name {
+  font-size: $font-base;
+  color: $text-primary;
+}
+
+.member-role {
+  font-size: $font-sm;
+  color: $text-secondary;
+  margin-left: $spacing-sm;
+}
+
+.view-link {
+  font-size: $font-md;
+  color: $green;
+  flex-shrink: 0;
+}
+
+.empty-hint {
+  padding: $spacing-lg;
+  text-align: center;
+  color: $text-secondary;
+  font-size: $font-md;
+}
+
+// 家庭 Tab 切换栏
+.family-tabs {
+  white-space: nowrap;
+  margin-bottom: $spacing-md;
+  padding: 0 $spacing-lg;
+}
+
+.tab-item {
+  display: inline-block;
+  padding: $spacing-md $spacing-xl;
+  margin-right: $spacing-md;
+  border-radius: $radius-round;
+  background: $bg-card;
+
+  &.active {
+    background: $green-bg;
+
+    .tab-text {
+      color: $green-deep;
+      font-weight: bold;
+    }
+  }
+}
+
+.tab-text {
+  font-size: $font-md;
+  color: $text-secondary;
+}
+
+// 房间管理
+.room-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-md 0;
+  border-bottom: 1rpx solid $border-light;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.room-info {
+  display: flex;
+  align-items: center;
+}
+
+.room-icon {
+  margin-right: $spacing-sm;
+}
+
+.room-name {
+  font-size: $font-base;
+  color: $text-primary;
+}
+
+.default-tag {
+  font-size: $font-xs;
+  color: $text-secondary;
+  background: $green-bg;
+  padding: 2rpx $spacing-sm;
+  border-radius: $radius-round;
+  margin-left: $spacing-sm;
+}
+
+.room-actions {
+  display: flex;
+  gap: $spacing-md;
+  flex-shrink: 0;
+}
+
+.delete-link {
+  font-size: $font-md;
+  color: $red;
+}
+
+.add-room-btn {
+  margin-top: $spacing-md;
+  padding: $spacing-md;
+  text-align: center;
+  border: 2rpx dashed $green;
+  border-radius: $radius-md;
+  color: $green;
+  font-size: $font-md;
+}

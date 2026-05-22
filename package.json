@@ -1,0 +1,36 @@
+{
+  "name": "plant-care-miniprogram",
+  "version": "1.0.0",
+  "private": true,
+  "description": "植物养护助手微信小程序",
+  "scripts": {
+    "dev:mp": "uni --platform mp-weixin",
+    "build": "uni build",
+    "lint": "eslint src --ext .ts,.vue --fix",
+    "format": "prettier --write src/**/*.{ts,vue,scss}",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "overrides": {
+    "@vue/shared": "3.5.34"
+  },
+  "dependencies": {
+    "pinia": "^2.1.0",
+    "vue": "3.5.34"
+  },
+  "devDependencies": {
+    "@dcloudio/types": "^3.4.0",
+    "@dcloudio/uni-app": "3.0.0-alpha-1000920260513001",
+    "@dcloudio/uni-mp-weixin": "^3.0.0-alpha-5000920260512001",
+    "@dcloudio/vite-plugin-uni": "3.0.0-alpha-5000920260512001",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "@vue/eslint-config-typescript": "^12.0.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-vue": "^9.20.0",
+    "prettier": "^3.2.0",
+    "sass": "^1.69.0",
+    "typescript": "^5.3.0",
+    "vue-tsc": "^1.8.0"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/plant-detail/index",
+    "pages/plant-add/index",
+    "pages/reminder/index",
+    "pages/memorial/index",
+    "pages/memorial-add/index",
+    "pages/profile/index",
+    "pages/family-manage/index",
+    "pages/member-detail/index",
+    "pages/timeline/index",
+    "pages/event-add/index",
+    "pages/room-manage/index",
+    "pages/settings/index"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundColor": "#f5f5f5"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#07c160",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "static/tab/home.png",
+        "selectedIconPath": "static/tab/home-active.png"
+      },
+      {
+        "pagePath": "pages/reminder/index",
+        "text": "提醒",
+        "iconPath": "static/tab/reminder.png",
+        "selectedIconPath": "static/tab/reminder-active.png"
+      },
+      {
+        "pagePath": "pages/memorial/index",
+        "text": "纪念",
+        "iconPath": "static/tab/memorial.png",
+        "selectedIconPath": "static/tab/memorial-active.png"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "text": "我的",
+        "iconPath": "static/tab/profile.png",
+        "selectedIconPath": "static/tab/profile-active.png"
+      }
+    ]
+  },
+  "cloud": true,
+  "usingComponents": {}
+}

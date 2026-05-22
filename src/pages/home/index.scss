@@ -1,0 +1,88 @@
+@import '@/styles/variables.scss';
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header-fixed {
+  flex-shrink: 0;
+}
+
+.filter-bar {
+  padding: $spacing-md $spacing-xl;
+  background: $bg-card;
+  border-bottom: 1rpx solid $border-light;
+}
+
+.scroll-container {
+  flex: 1;
+  height: 0;
+}
+
+.filter-text {
+  font-size: $font-base;
+  color: $text-primary;
+}
+
+.empty-icon,
+.loading-icon {
+  font-size: 80rpx;
+  display: block;
+  margin-bottom: $spacing-lg;
+}
+
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120rpx 0;
+  color: $text-secondary;
+  font-size: $font-base;
+}
+
+.room-group {
+  padding: $spacing-lg $spacing-xl;
+}
+
+.room-title {
+  font-size: $font-base;
+  font-weight: bold;
+  color: $text-primary;
+  margin-bottom: $spacing-sm;
+  display: block;
+}
+
+.bottom-bar {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $spacing-md;
+  background: $bg-card;
+  border-top: 1rpx solid $border-light;
+  font-size: $font-sm;
+  color: $text-secondary;
+}
+
+.divider {
+  margin: 0 $spacing-lg;
+}
+
+.stat-item {
+  font-size: $font-sm;
+}
+
+.load-more {
+  display: flex;
+  justify-content: center;
+  padding: $spacing-lg;
+}
+
+.load-more-text {
+  font-size: $font-sm;
+  color: $text-hint;
+}

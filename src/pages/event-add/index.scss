@@ -1,0 +1,100 @@
+@import '@/styles/variables.scss';
+
+.page {
+  padding: $spacing-lg;
+}
+
+.form {
+  padding: $spacing-xl;
+}
+
+.photo-section {
+  margin-bottom: $spacing-xl;
+}
+
+.form-label {
+  font-size: $font-base;
+  color: $text-primary;
+  display: block;
+  margin-bottom: $spacing-md;
+}
+
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-md;
+}
+
+.photo-item {
+  width: 200rpx;
+  height: 200rpx;
+  position: relative;
+
+  image {
+    width: 100%;
+    height: 100%;
+    border-radius: $radius-md;
+  }
+}
+
+.del-btn {
+  position: absolute;
+  top: -8rpx;
+  right: -8rpx;
+  background: $red;
+  color: $text-white;
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: $radius-circle;
+  text-align: center;
+  line-height: 36rpx;
+  font-size: $font-sm;
+}
+
+.add-photo {
+  width: 200rpx;
+  height: 200rpx;
+  border: 2rpx dashed $border-color;
+  border-radius: $radius-md;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $green-pale;
+
+  .plus {
+    font-size: 60rpx;
+    color: $green;
+  }
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-xl 0;
+  border-bottom: 1rpx solid $border-light;
+
+  &.textarea-field {
+    flex-direction: column;
+    align-items: stretch;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+.value-text {
+  font-size: $font-base;
+  color: $text-primary;
+}
+
+.desc-input {
+  width: 100%;
+  min-height: 120rpx;
+  font-size: $font-base;
+  line-height: 1.5;
+}
+
+.submit-btn {
+  margin: $spacing-3xl $spacing-lg;
+  border-radius: $radius-round;
+}

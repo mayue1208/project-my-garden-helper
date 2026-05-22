@@ -1,0 +1,93 @@
+@import '@/styles/variables.scss';
+
+.page {
+  padding-bottom: 120rpx;
+}
+
+.stats-bar {
+  margin: $spacing-md $spacing-xl;
+  padding: $spacing-md;
+  text-align: center;
+}
+
+.stats-text {
+  font-size: $font-base;
+  color: $text-secondary;
+}
+
+.section {
+  padding: 0 $spacing-xl $spacing-lg;
+}
+
+.section-title {
+  font-size: $font-base;
+  font-weight: bold;
+  color: $text-primary;
+  display: block;
+  margin-bottom: $spacing-md;
+}
+
+.memorial-card {
+  display: flex;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-md;
+}
+
+.thumb {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: $radius-md;
+  margin-right: $spacing-lg;
+  flex-shrink: 0;
+
+  &.placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $green-bg;
+    font-size: 50rpx;
+  }
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  font-size: $font-lg;
+  font-weight: bold;
+  color: $text-primary;
+}
+
+.reason {
+  font-size: $font-md;
+  color: $text-secondary;
+  margin-top: $spacing-xs;
+}
+
+.farewell {
+  font-size: $font-xs;
+  color: $text-hint;
+  font-style: italic;
+  margin-top: $spacing-xs;
+}
+
+.fab {
+  position: fixed;
+  bottom: 100rpx;
+  right: $spacing-2xl;
+  width: $fab-size;
+  height: $fab-size;
+  border-radius: $radius-circle;
+  background: $green;
+  color: $text-white;
+  font-size: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: $shadow-lg;
+  z-index: 10;
+}

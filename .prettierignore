@@ -1,0 +1,5 @@
+node_modules
+dist
+cloudfunctions
+*.min.js
+package.json

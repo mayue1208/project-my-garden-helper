@@ -1,0 +1,73 @@
+@import '@/styles/variables.scss';
+
+.reminder-item {
+  display: flex;
+  align-items: center;
+  padding: $spacing-xl $spacing-2xl;
+  background: $bg-card;
+  border-bottom: 1rpx solid $border-light;
+  border-left: 6rpx solid transparent;
+
+  &.overdue {
+    border-left-color: $red;
+  }
+
+  &.delayed {
+    border-left-color: $amber;
+  }
+}
+
+.info {
+  flex: 1;
+}
+
+.plant-name {
+  font-size: $font-xl;
+  font-weight: bold;
+  color: $text-primary;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  font-size: $font-base;
+  color: $text-secondary;
+  margin-top: $spacing-xs;
+  flex-wrap: wrap;
+}
+
+.last {
+  margin-left: $spacing-md;
+}
+
+.delayed-tag {
+  margin-left: $spacing-md;
+  color: $amber;
+  font-size: $font-base;
+}
+
+.actions {
+  display: flex;
+  gap: $spacing-sm;
+  flex-shrink: 0;
+}
+
+.btn-done {
+  padding: $spacing-xs $spacing-xl;
+  background: $green-bg;
+  color: $green-deep;
+  border: none;
+  border-radius: $radius-round;
+  font-size: $font-base;
+  line-height: 2;
+}
+
+.btn-delay {
+  padding: $spacing-xs $spacing-xl;
+  background: $bg-tag;
+  color: $text-secondary;
+  border: none;
+  border-radius: $radius-round;
+  font-size: $font-base;
+  line-height: 2;
+}

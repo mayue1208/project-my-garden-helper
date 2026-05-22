@@ -1,0 +1,109 @@
+/* uni-app 全局变量入口 */
+page {
+  background-color: #f6f8f6;
+  font-size: 28rpx;
+  color: #1a1a2e;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+view,
+text,
+scroll-view {
+  box-sizing: border-box;
+}
+button {
+  border-radius: 12rpx;
+  font-size: 28rpx;
+}
+.card {
+  background: #ffffff;
+  border-radius: 16rpx;
+  padding: 20rpx;
+  box-shadow: 0 2rpx 8rpx rgba(7, 193, 96, 0.08);
+}
+.btn-primary {
+  background: #07c160;
+  color: #ffffff;
+  border: none;
+  border-radius: 30rpx;
+  padding: 16rpx 30rpx;
+  font-size: 28rpx;
+}
+.btn-primary[disabled] {
+  opacity: 0.5;
+}
+.empty-state {
+  text-align: center;
+  padding: 200rpx 0;
+  color: #8c8c8c;
+}
+.empty-state .sub {
+  display: block;
+  font-size: 24rpx;
+  margin-top: 12rpx;
+}
+.fab {
+  position: fixed;
+  bottom: 160rpx;
+  right: 30rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background: #07c160;
+  color: #ffffff;
+  font-size: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8rpx 24rpx rgba(7, 193, 96, 0.12);
+  z-index: 100;
+}
+.page {
+  padding: 20rpx;
+  padding-bottom: 100rpx;
+}
+.header {
+  display: flex;
+  align-items: center;
+  padding: 24rpx;
+  margin-bottom: 16rpx;
+}
+.user-name {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #1a1a2e;
+}
+.count {
+  font-size: 26rpx;
+  color: #8c8c8c;
+  margin-left: 20rpx;
+}
+.date-group {
+  margin-bottom: 20rpx;
+}
+.date-label {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #8c8c8c;
+  display: block;
+  margin-bottom: 12rpx;
+  padding: 0 12rpx;
+}
+.op-group {
+  padding: 16rpx 20rpx;
+  margin-bottom: 12rpx;
+  display: flex;
+  align-items: center;
+}
+.op-type {
+  font-size: 28rpx;
+  color: #1a1a2e;
+  font-weight: 500;
+  margin-right: 16rpx;
+  flex-shrink: 0;
+}
+.op-plants {
+  font-size: 26rpx;
+  color: #8c8c8c;
+}
