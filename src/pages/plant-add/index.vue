@@ -31,11 +31,10 @@ function initCareConfigs(): Record<string, { enabled: boolean; intervalDays: num
 const form = reactive({
   name: '',
   species: '',
-  nickname: '',
   photo: '',
   roomId: '',
   roomName: '',
-  purchaseDate: '',
+  purchaseDate: new Date().toISOString().slice(0, 10),
   note: '',
   careConfigs: initCareConfigs(),
 });
@@ -94,7 +93,6 @@ async function submit() {
       data: {
         name: form.name,
         species: form.species,
-        nickname: form.nickname,
         photo: form.photo,
         roomId: form.roomId,
         purchaseDate: form.purchaseDate,
@@ -132,7 +130,6 @@ async function loadPlantData() {
       const p = plantRes.data;
       form.name = p.name || '';
       form.species = p.species || '';
-      form.nickname = p.nickname || '';
       form.photo = p.photo || '';
       form.roomId = p.roomId || '';
       form.purchaseDate = p.purchaseDate || '';
@@ -194,10 +191,6 @@ onShow(async () => {
       <view class="field">
         <text class="label">品种</text>
         <input v-model="form.species" placeholder="如：龟背竹" class="input" />
-      </view>
-      <view class="field">
-        <text class="label">昵称</text>
-        <input v-model="form.nickname" placeholder="给植物起个名字" class="input" maxlength="20" />
       </view>
       <view class="field">
         <text class="label">房间</text>

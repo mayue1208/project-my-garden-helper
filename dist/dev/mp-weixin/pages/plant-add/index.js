@@ -28,11 +28,10 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
     const form = common_vendor.reactive({
       name: "",
       species: "",
-      nickname: "",
       photo: "",
       roomId: "",
       roomName: "",
-      purchaseDate: "",
+      purchaseDate: (/* @__PURE__ */ new Date()).toISOString().slice(0, 10),
       note: "",
       careConfigs: initCareConfigs()
     });
@@ -83,7 +82,6 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
           data: {
             name: form.name,
             species: form.species,
-            nickname: form.nickname,
             photo: form.photo,
             roomId: form.roomId,
             purchaseDate: form.purchaseDate,
@@ -120,7 +118,6 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
           const p = plantRes.data;
           form.name = p.name || "";
           form.species = p.species || "";
-          form.nickname = p.nickname || "";
           form.photo = p.photo || "";
           form.roomId = p.roomId || "";
           form.purchaseDate = p.purchaseDate || "";
@@ -173,14 +170,12 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
         e: common_vendor.o(($event) => form.name = $event.detail.value, "4b"),
         f: form.species,
         g: common_vendor.o(($event) => form.species = $event.detail.value, "db"),
-        h: form.nickname,
-        i: common_vendor.o(($event) => form.nickname = $event.detail.value, "3f"),
-        j: common_vendor.t(form.roomName || "选择房间"),
-        k: common_vendor.o(onRoomChange, "e4"),
-        l: common_vendor.unref(roomStore).rooms.map((r) => r.name),
-        m: common_vendor.t(form.purchaseDate || "选择日期"),
-        n: common_vendor.o(onDateChange, "ab"),
-        o: common_vendor.f(displayCareTypes, (ct, k0, i0) => {
+        h: common_vendor.t(form.roomName || "选择房间"),
+        i: common_vendor.o(onRoomChange, "f9"),
+        j: common_vendor.unref(roomStore).rooms.map((r) => r.name),
+        k: common_vendor.t(form.purchaseDate || "选择日期"),
+        l: common_vendor.o(onDateChange, "34"),
+        m: common_vendor.f(displayCareTypes, (ct, k0, i0) => {
           return {
             a: form.careConfigs[ct].enabled,
             b: common_vendor.o(($event) => onCareToggle(ct, $event), ct),
@@ -192,11 +187,11 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
             f: ct
           };
         }),
-        p: form.note,
-        q: common_vendor.o(($event) => form.note = $event.detail.value, "56"),
-        r: common_vendor.t(submitting.value ? "保存中..." : isEdit.value ? "更新" : "保存"),
-        s: submitting.value,
-        t: common_vendor.o(submit, "f8")
+        n: form.note,
+        o: common_vendor.o(($event) => form.note = $event.detail.value, "b1"),
+        p: common_vendor.t(submitting.value ? "保存中..." : isEdit.value ? "更新" : "保存"),
+        q: submitting.value,
+        r: common_vendor.o(submit, "9f")
       });
     };
   }

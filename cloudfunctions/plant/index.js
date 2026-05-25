@@ -66,6 +66,13 @@ exports.main = async (event, context) => {
         const now = new Date();
         const configs = careConfigs.map((c) => {
           const isWater = c.type === 'water';
+          // 对于浇水配置，添加初始间隔和重置日期等字段
+          const waterFields = isWater ? {
+            initialIntervalDays: c.intervalDays,  // 初始间隔
+            actualIntervalDays: c.intervalDays,   // 当前实际间隔
+            lastResetDate: now                    // 最后重置日期
+          } : {};
+
           return {
             plantId: res._id,
             familyId,
@@ -75,6 +82,7 @@ exports.main = async (event, context) => {
             nextTime: isWater ? new Date(now.getTime() + c.intervalDays * 86400000) : db.serverDate(),
             enabled: true,
             createdBy: OPENID,
+            ...waterFields
           };
         });
         await Promise.all(configs.map((c) => db.collection('care_configs').add({ data: c })));
@@ -107,16 +115,27 @@ exports.main = async (event, context) => {
     if (careConfigs) {
       await db.collection('care_configs').where({ plantId }).remove();
       if (careConfigs.length > 0) {
-        const configs = careConfigs.map((c) => ({
-          plantId,
-          familyId,
-          type: c.type,
-          intervalDays: c.intervalDays,
-          lastTime: null,
-          nextTime: db.serverDate(),
-          enabled: true,
-          createdBy: OPENID,
-        }));
+        const configs = careConfigs.map((c) => {
+          const isWater = c.type === 'water';
+          // 对于浇水配置，添加初始间隔和重置日期等字段
+          const waterFields = isWater ? {
+            initialIntervalDays: c.intervalDays,  // 初始间隔
+            actualIntervalDays: c.intervalDays,   // 当前实际间隔
+            lastResetDate: new Date()             // 最后重置日期
+          } : {};
+
+          return {
+            plantId,
+            familyId,
+            type: c.type,
+            intervalDays: c.intervalDays,
+            lastTime: null,
+            nextTime: db.serverDate(),
+            enabled: true,
+            createdBy: OPENID,
+            ...waterFields
+          };
+        });
         await Promise.all(configs.map((c) => db.collection('care_configs').add({ data: c })));
       }
     }

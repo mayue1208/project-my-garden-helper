@@ -1,1 +1,0 @@
-"use strict";const e=require("../common/vendor.js").index.cloud;e.init({env:"cloud1-d4g789fy0fdab14e8",traceUser:!0}),exports.callFunction=function(n,c){return new Promise((t,o)=>{e.callFunction({name:n,data:c||{},success:e=>t(e.result),fail:e=>o(e)})})};

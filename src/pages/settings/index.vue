@@ -13,9 +13,11 @@ function initSettings() {
   const water = uni.getStorageSync('remindWater');
   const fertilize = uni.getStorageSync('remindFertilize');
   const overdue = uni.getStorageSync('remindOverdue');
+  const savedTime = uni.getStorageSync('remindTime');
   if (water !== '' && water !== undefined) remindWater.value = !!water;
   if (fertilize !== '' && fertilize !== undefined) remindFertilize.value = !!fertilize;
   if (overdue !== '' && overdue !== undefined) remindOverdue.value = !!overdue;
+  if (savedTime) remindTime.value = savedTime;
 }
 
 initSettings();
@@ -121,13 +123,6 @@ function handleLogout() {
       <view class="info-row">
         <text>版本</text>
         <text class="value-text">1.0.0</text>
-      </view>
-    </view>
-
-    <view class="section card">
-      <view class="clear-item" @tap="handleClearDB">
-        <text class="clear-text">清空数据库</text>
-        <text class="clear-hint">一次性操作，删除所有数据</text>
       </view>
     </view>
 

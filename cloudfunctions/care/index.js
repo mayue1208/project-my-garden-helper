@@ -49,18 +49,88 @@ exports.main = async (event) => {
         createdAt: db.serverDate(),
       },
     });
-    const config = await db
-      .collection('care_configs')
-      .where({ plantId, type, enabled: true })
-      .get();
-    if (config.data.length > 0) {
-      const cfg = config.data[0];
-      const now = new Date();
-      const nextTime = new Date(now.getTime() + cfg.intervalDays * 86400000);
-      await db.collection('care_configs').doc(cfg._id).update({
-        data: { lastTime: now, nextTime },
-      });
+
+    // 只针对浇水操作执行智能间隔逻辑
+    if (type === 'water') {
+      const config = await db
+        .collection('care_configs')
+        .where({ plantId, type, enabled: true })
+        .get();
+
+      if (config.data.length > 0) {
+        const cfg = config.data[0];
+        const now = new Date();
+
+        // 检查是否需要重置（超过3个月，即90天）
+        const lastReset = cfg.lastResetDate ? new Date(cfg.lastResetDate) : new Date(cfg.createdAt || cfg.updatedAt || now);
+        // 使用90天（约3个月）作为重置周期
+        const ninetyDays = 90 * 24 * 60 * 60 * 1000;
+        const ninetyDaysAgo = new Date(Date.now() - ninetyDays);
+
+        if (lastReset < ninetyDaysAgo) {
+          // 超过3个月，重置为初始值
+          const newActualInterval = cfg.initialIntervalDays || cfg.intervalDays;
+
+          // 更新配置
+          await db.collection('care_configs').doc(cfg._id).update({
+            data: {
+              lastTime: now,
+              nextTime: new Date(now.getTime() + newActualInterval * 86400000),
+              actualIntervalDays: newActualInterval,
+              lastResetDate: now
+            },
+          });
+        } else {
+          // 未超过3个月，应用智能调整逻辑
+          let adjustedInterval = cfg.actualIntervalDays || cfg.intervalDays;
+
+          if (cfg.lastTime) {
+            // 计算实际间隔天数（从上次浇水到现在）
+            const actualDays = Math.round((now.getTime() - new Date(cfg.lastTime).getTime()) / 86400000);
+
+            // 比较与预期的间隔差异
+            const expectedInterval = cfg.actualIntervalDays || cfg.intervalDays;
+            const difference = actualDays - expectedInterval;
+
+            // 应用调整规则
+            if (difference < 0) {
+              // 提前浇水，使用实际间隔
+              adjustedInterval = actualDays;
+            } else {
+              // 延迟浇水，增加延迟的天数
+              adjustedInterval = expectedInterval + difference;
+            }
+
+            // 设置最大和最小间隔限制（例如最小3天，最大30天）
+            adjustedInterval = Math.max(3, Math.min(30, adjustedInterval));
+          }
+
+          // 更新配置
+          await db.collection('care_configs').doc(cfg._id).update({
+            data: {
+              lastTime: now,
+              nextTime: new Date(now.getTime() + adjustedInterval * 86400000),
+              actualIntervalDays: adjustedInterval
+            },
+          });
+        }
+      }
+    } else {
+      // 非浇水操作，使用原有逻辑
+      const config = await db
+        .collection('care_configs')
+        .where({ plantId, type, enabled: true })
+        .get();
+      if (config.data.length > 0) {
+        const cfg = config.data[0];
+        const now = new Date();
+        const nextTime = new Date(now.getTime() + cfg.intervalDays * 86400000);
+        await db.collection('care_configs').doc(cfg._id).update({
+          data: { lastTime: now, nextTime },
+        });
+      }
     }
+
     // 删除对应的延迟提醒
     await db
       .collection('delayed_reminders')

@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "纪念碑",
-  "usingComponents": {
-    "family-switcher": "../../components/family-switcher/index"
-  }
-}
